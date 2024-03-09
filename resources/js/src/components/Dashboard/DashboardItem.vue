@@ -23,7 +23,7 @@
     >
         <input type="text" name="title" placeholder="Название задачи" :value="title" @input="updateTitle = $event.target.value">
         <textarea name="text" placeholder="Описание задачи" :value="text" @input="updateText = $event.target.value"></textarea>
-        <button @click.prevent="updateTask">Создать</button>
+        <button @click.prevent="updateTask">Обновить</button>
     </ModalCustom>
 </template>
 

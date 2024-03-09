@@ -27,7 +27,7 @@
         @hideModal="closeModalUpdate"
     >
         <input :value="updateStatusName" @input="updateStatusName = $event.target.value">
-        <button @click.prevent="updateStatus">Создать</button>
+        <button @click.prevent="updateStatus">Обновить</button>
     </ModalCustom>
 </template>
 
@@ -70,12 +70,16 @@ export default {
                 this.fetchCreateMainTask(this.statusName);
             }
         }
+
+        this.showModal = false;
     },
     updateStatus() {
         this.fetchUpdateMainTask({
             'id': this.objectUpdateStatus.id,
             'title': this.updateStatusName,
         });
+
+        this.modalUpdate = false;
     },
     update(event) {
         const status = this.getStatusList.filter(el => el.id === event.id)[0];
