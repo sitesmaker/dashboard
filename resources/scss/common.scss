@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;         /* ширина scrollbar */
+    }
+    &::-webkit-scrollbar-track {
+        background: rgba($black-3, .4);        /* цвет дорожки */
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $black-3;    /* цвет плашки */
+        border-radius: 10px;       /* закругления плашки */
+    }
+}
+
+html,
+body,
+#app,
+.main {
+    height: 100%;
+}
+
+body {
+    background-color: $light;
+    font-family: Montserrat, sans-serif;
+}
+
+.row {
+    max-width: $row-widht;
+    width: 100%;
+    padding: $row-padding;
+    margin: $center;
+}
+
+.main {
+    padding-top: $header-h;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px;
+    color: $black;
+}
